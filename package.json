@@ -1,0 +1,33 @@
+{
+  "name": "backcalculetteimmo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node .",
+    "resetdb": "psql -U countercalculette -d countercalculette -f data/import_data.sql",
+    "importdb": "psql -U countercalculette -d countercalculette -f data/import_tables.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrederickChenot/backCalculetteImmo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FrederickChenot/backCalculetteImmo/issues"
+  },
+  "homepage": "https://github.com/FrederickChenot/backCalculetteImmo#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "pg": "^8.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "description": ""
+}
