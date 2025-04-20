@@ -5,8 +5,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node .",
+    "dev": "node-dev . --clear --no-notify",
     "resetdb": "psql -U countercalculette -d countercalculette -f data/import_data.sql",
-    "importdb": "psql -U countercalculette -d countercalculette -f data/import_tables.sql"
+    "importdb": "psql -U countercalculette -d countercalculette -f data/import_tables.sql",
+    "resetdbcrypto": "psql -U crypto -d crypto -f data/import_data_crypto.sql",
+    "importdbcrypto": "psql -U crypto -d crypto -f data/import_tables_crypto.sql"
   },
   "repository": {
     "type": "git",
@@ -20,10 +23,12 @@
   },
   "homepage": "https://github.com/FrederickChenot/backCalculetteImmo#readme",
   "dependencies": {
+    "axios": "^1.7.9",
     "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "pg": "^8.13.1"
   },
   "devDependencies": {
